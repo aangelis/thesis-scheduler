@@ -15,6 +15,11 @@ npm install
 node app.js
 ```
 
+#### Οδηγίες εγκατάστασης k8s
+
+[k8s/README.md](k8s/README.md)
+
+
 ## Ρυθμίσεις μεταβλητών εφαρμογής
 
 ```bash
