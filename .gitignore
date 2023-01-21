@@ -131,3 +131,4 @@ dist
 
 # test code
 test*
+k8s/thesis-scheduler-configmap.yaml
