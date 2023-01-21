@@ -32,7 +32,7 @@ subscriber.notifications.on(channel, (payload) => {
 
     crontab.load(function(err, crontab) {
 
-      var command = `/usr/bin/curl -X POST ${endpoint} -H 'Content-Type: application/json' -d '{"deposit_id":${payload.id}}'`
+      var command = `curl -X POST ${endpoint} -H 'Content-Type: application/json' -d '{"deposit_id":${payload.id}}'`
       var comment = `#deposit${payload.id}upload`
 
       crontab.remove({comment: comment});

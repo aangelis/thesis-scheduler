@@ -1,4 +1,4 @@
 # Clean installed cronjobs daily at 05:01
-1 5 * * * /usr/bin/crontab -l | /usr/bin/awk '!(/##/ && !/awk/)' | /usr/bin/crontab -
+1 5 * * * crontab -l | awk '!(/##/ && !/awk/)' | crontab -
 # Check confirmed and upload deposits daily at 05:03
-3 5 * * * /usr/bin/curl http://thesis-clip:8080/api/deposits_uploader
+3 5 * * * curl http://thesis-clip:8080/api/deposits_uploader
