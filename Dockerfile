@@ -19,4 +19,4 @@ RUN npm install
 COPY . /code
 
 # Add default cron jobs and start application
-CMD ["/bin/sh", "-c", "/usr/bin/crontab -l > cronbak;/bin/cat crontab.default.jobs >> cronbak;/usr/bin/crontab cronbak;/bin/rm cronbak;node app.js"]
+CMD ["/bin/sh", "-c", "crontab -l > cronbak;cat crontab.default.jobs >> cronbak;crontab cronbak;rm cronbak;crond;node app.js"]
