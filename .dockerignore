@@ -1,4 +1,7 @@
+.dockerignore
+.git
+.gitignore
 Dockerfile
-README.md
 k8s
+README.md
 test*
