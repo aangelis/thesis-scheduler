@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thesis-scheduler-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: thesis-scheduler
+  template:
+    metadata:
+      labels:
+        component: thesis-scheduler
+    spec:
+      containers:
+        - name: thesis-scheduler
+          image: 'thesis-scheduler:01211309'
+          envFrom:
+            - configMapRef:
+                name: thesis-scheduler-configmap
