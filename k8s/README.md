@@ -1,5 +1,6 @@
 ### Thesis scheduler app
 
 ```
-k apply -f thesis-scheduler-deployment.yaml
+kubectl apply -f thesis-scheduler-configmap.yaml
+kubectl apply -f thesis-scheduler-deployment.yaml
 ```

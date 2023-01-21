@@ -24,7 +24,7 @@ node app.js
 
 ```bash
 THESIS_UPLOAD_API_ENDPOINT=<API address>
-# e.g. "http://thesis-clip/api/deposit_uploader"
+# e.g. "http://thesis-clip:8080/api/deposit_uploader"
 
 DATABASE_URL=<connection config>
 # e.g. "postgresql://username:password@hostname:port/dbname"
