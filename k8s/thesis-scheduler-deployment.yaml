@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: thesis-scheduler
-          image: 'thesis-scheduler:01211309'
+          image: 'thesis-scheduler:01211401'
           envFrom:
             - configMapRef:
                 name: thesis-scheduler-configmap
