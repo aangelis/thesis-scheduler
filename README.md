@@ -39,15 +39,15 @@ MINUTES_INTERVAL=<string of comma separated numbers>
 
 ```
 # Clean installed cronjobs daily at 05:01
-1 5 * * * /usr/bin/crontab -l | /usr/bin/awk '!(/##/ && !/awk/)' | /usr/bin/crontab -
+1 5 * * * crontab -l | awk '!(/##/ && !/awk/)' | crontab -
 # Check confirmed and upload deposits daily at 05:03
-3 5 * * * /usr/bin/curl http://thesis-clip/api/deposits_uploader
+3 5 * * * curl http://thesis-clip:8080/api/deposits_uploader
 # Cronjobs installed by scheduler
-38 22 17 1 * /usr/bin/curl -X POST http://thesis-clip/api/deposit_uploader -H 'Content-Type: application/json' -d '{"deposit_id":1}' ##deposit1upload
-44 22 17 1 * /usr/bin/curl -X POST http://thesis-clip/api/deposit_uploader -H 'Content-Type: application/json' -d '{"deposit_id":1}' ##deposit1upload
-4 23 17 1 * /usr/bin/curl -X POST http://thesis-clip/api/deposit_uploader -H 'Content-Type: application/json' -d '{"deposit_id":1}' ##deposit1upload
-24 0 18 1 * /usr/bin/curl -X POST http://thesis-clip/api/deposit_uploader -H 'Content-Type: application/json' -d '{"deposit_id":1}' ##deposit1upload
+38 22 17 1 * curl -X POST http://thesis-clip:8080/api/deposit_uploader -H 'Content-Type: application/json' -d '{"deposit_id":1}' ##deposit1upload
+44 22 17 1 * curl -X POST http://thesis-clip:8080/api/deposit_uploader -H 'Content-Type: application/json' -d '{"deposit_id":1}' ##deposit1upload
+4 23 17 1 * curl -X POST http://thesis-clip:8080/api/deposit_uploader -H 'Content-Type: application/json' -d '{"deposit_id":1}' ##deposit1upload
+24 0 18 1 * curl -X POST http://thesis-clip:8080/api/deposit_uploader -H 'Content-Type: application/json' -d '{"deposit_id":1}' ##deposit1upload
 ```
-Note: Job created at 22:37 with default intervals.
+Note: Sample jobs created at 22:37 with default intervals.
 
 
